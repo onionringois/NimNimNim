@@ -1,0 +1,21 @@
+.duties {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    width: 100%;
+    overflow-x: auto; 
+    
+    padding-bottom: 10px;
+
+    &::-webkit-scrollbar {
+        height: 7px;
+        border-radius: 3px;
+        background-color: rgba(0,0,0,.2);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 3px;
+        height: 8px;        background-color: rgba(0,0,0,.2);
+    }
+}   
