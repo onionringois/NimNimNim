@@ -30,7 +30,8 @@ const distribute = async (): Promise<void> => {
     );
 
     if (stagesToApprove.length) {
-        const text = `You have ${stagesToApprove.length} active requests.\nFollow the link below to approve 'em all!\nhttps://tinyurl.com/2p8svfxn`
+        const countText = stagesToApprove.length === 1 ? 'יש לך בקשה אחת פתוחה' : `יש לך ${stagesToApprove.length} בקשות פתוחות`
+        const text = `${countText} לאישור טופס נשק.\nלאישורים עקבו אחרי הלינק הבא!\nhttps://tinyurl.com/2p8svfxn`
         const messageRes = await sendMessage(text, approver.phoneNumber);
         const { body, from, to, dateCreated, dateSent } = messageRes;
         
