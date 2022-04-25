@@ -7,7 +7,16 @@
         border-radius: 50%;
         width: 150px;
         height: 150px;
-        background-image: url('../../../assets/nightCamping.svg');
+
+        background-size: contain;
+
+        &.out {
+            background-image: url('../../../assets/nightCamping.svg');
+        }
+
+        &.in {
+            background-image: url('../../../assets/home.jpeg');
+        }
     
         user-select: none;
     
