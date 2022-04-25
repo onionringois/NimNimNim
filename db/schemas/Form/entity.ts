@@ -16,6 +16,9 @@ export default class Form extends BaseEntity {
 	@Column('varchar')
 	type!: string;
 
+	@Column('varchar')
+	dutyType!: string;
+
 	@Column({ type: 'date'})
 	endDate!: string;
 
