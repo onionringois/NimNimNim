@@ -1,0 +1,10 @@
+[
+    {
+        "stageId": 1,
+        "approverId": 1
+    },
+    {
+        "stageId": 2,
+        "approverId": 2
+    }
+]
