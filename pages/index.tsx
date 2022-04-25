@@ -1,7 +1,12 @@
+import "reflect-metadata"
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import config from "../db/config/base.ormconfig";
+import { createConnection } from "typeorm";
+
+createConnection(config);
 
 const Home: NextPage = () => {
   return (
