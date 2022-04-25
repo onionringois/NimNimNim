@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "gravsky",
+        "phoneNumber": "+972504537753",
+        "rank": "admin",
+        "gender": "male"
+    },
+    {
+        "id": 2,
+        "name": "bashi",
+        "phoneNumber": "+972527780066",
+        "rank": "admin",
+        "gender": "male"
+    },
+    {
+        "id": 3,
+        "name": "yegel",
+        "phoneNumber": "+972504537753",
+        "rank": "soldier",
+        "gender": "male"
+    }
+]
