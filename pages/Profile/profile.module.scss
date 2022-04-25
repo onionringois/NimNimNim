@@ -1,0 +1,34 @@
+.profile {
+    width: 100vw;
+    height: 100vh;
+    
+    direction: rtl;
+    box-sizing: border-box;
+    padding: 20px;
+
+    .title {
+        text-align: center;
+        font-size: 3rem;
+
+        margin-bottom: 50px;
+    }
+
+    .content {
+        --side-padding: 50px;
+        padding: 0 var(--side-padding);
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        &::after {
+            position: absolute;
+            top: 0;
+            left: var(--side-padding);
+            
+            content: '';
+            width: 20%;
+            height: calc(100% - 7px);
+            background: linear-gradient(to right, white, transparent);
+        }
+    }
+}

@@ -16,11 +16,13 @@ const Home: React.FC = () => {
       <div className={styles.homeButtonsContainer}>
         <Link href='/placeScreen'>
           <div className={styles.homeButton}>להוצאת נשק</div>
-        </Link>
+        </Link>        
+        <Link href='/profileScreen'>
+          <div className={styles.homeButton}>השמירות שלי</div>
+        </Link>    
         <div className={styles.homeButton} onClick={sendWhatsapp}>
             שליחה לווטסאפ למפקדים
-        </div>
-        <div className={styles.homeButton}>השמירות שלי</div>
+        </div>    
       </div>
     </div>
   )

@@ -1,0 +1,46 @@
+.duty {
+    font-size: 1.5em;
+    
+    .type {
+        font-size: .8em;
+        font-weight: bold;
+        color: #6B705C;
+    }
+
+    .date {        
+        font-weight: bold;
+    }
+
+    .status {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: center;
+
+        .text {
+
+        }
+
+        .icon {
+            margin-left: 10px;
+        }
+    }
+
+    &:not(:last-child) {
+        --duty-margin: 30px;
+
+        margin-left: var(--duty-margin);
+        position: relative;
+
+        &::after {
+            position: absolute;
+            top: 0;
+            left: calc(-1 * var(--duty-margin) / 2);
+
+            content: '';
+            width: 2px;
+            background-color: black;
+            height: 100%;
+        }
+    }
+}
