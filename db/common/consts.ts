@@ -1,0 +1,2 @@
+export const connectionDIKey: string = 'connection';
+export const isDev: boolean = process.env.NODE_ENV === 'development';

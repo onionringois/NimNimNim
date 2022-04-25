@@ -9,9 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "class-validator": "^0.13.2",
     "next": "12.1.5",
+    "pg": "^8.7.3",
     "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react-dom": "18.0.0",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.43",
+    "typeorm-naming-strategies": "^4.1.0"
   },
   "devDependencies": {
     "@types/node": "17.0.26",
