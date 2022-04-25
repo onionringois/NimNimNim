@@ -3,21 +3,21 @@
         "id": 1,
         "name": "gravsky",
         "phoneNumber": "+972504537753",
-        "rank": "admin",
+        "rankId": 1,
         "gender": "male"
     },
     {
         "id": 2,
         "name": "bashi",
         "phoneNumber": "+972527780066",
-        "rank": "admin",
+        "rankId": 2,
         "gender": "male"
     },
     {
         "id": 3,
         "name": "yegel",
         "phoneNumber": "+972504537753",
-        "rank": "soldier",
+        "rankId": 0,
         "gender": "male"
     }
 ]

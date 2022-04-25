@@ -6,7 +6,6 @@ import {
 	ManyToOne,
 	JoinColumn,
 } from 'typeorm';
-import { People } from '../../entities';
 import Form from '../Form/entity';
 import StageType from '../StageType/entity';
 import WeaponAuthority from '../WeaponAuthority/entity';
@@ -16,11 +15,11 @@ export default class Stage extends BaseEntity {
 	@PrimaryGeneratedColumn('uuid')
 	id!: string;
 
-	@Column('uuid')
-	approvingAuthorityId!: string;
-	@ManyToOne(() => WeaponAuthority)
+	@Column('uuid', { nullable: true })
+	approvingAuthorityId?: string;
+	@ManyToOne(() => WeaponAuthority, { nullable: true })
 	@JoinColumn({ name: 'approvingAuthorityId' })
-	approvingAuthority!: WeaponAuthority;
+	approvingAuthority?: WeaponAuthority;
 
 	@Column('uuid')
 	formId!: string;

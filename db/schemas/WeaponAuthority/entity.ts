@@ -7,7 +7,6 @@ import {
 	JoinColumn,
 } from 'typeorm';
 import { People } from '../entities';
-import Rank from '../Rank/entity';
 import StageType from '../StageType/entity';
 
 @Entity()
@@ -16,10 +15,10 @@ export default class WeaponAuthority extends BaseEntity {
 	id!: string;
 
 	@Column('uuid')
-	personId!: string;
+	approverId!: string;
 	@ManyToOne(() => People)
-	@JoinColumn({ name: 'person_id' })
-	person!: People
+	@JoinColumn({ name: 'approver_id' })
+	approver!: People
 
 	@Column('uuid')
 	stageTypeId!: string;

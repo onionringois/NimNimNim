@@ -18,19 +18,19 @@ const distribute = async (): Promise<void> => {
   const stages = (await import('./stagesMockData.json')).default;
   const authorities = (await import('./weaponAuthority.json')).default;
 
-  const approvers = people.filter((person) => person.rank === "admin");
+  const approvers = people.filter((person) => person.rankId > 0);
 
   approvers.forEach(async (approver) => {
     const stagesToApprove = stages.filter((stage) => 
         !stage.approvingAuthority &&
         authorities.some((authority) => 
             authority.approverId === approver.id && 
-            authority.stageId === stage.id
+            authority.stageTypeId === stage.id
         )
     );
 
     if (stagesToApprove.length) {
-        const text = `You have ${stagesToApprove.length} active requests.\nFollow the link below to approve 'em all!\nhttps://ynet.co.il`
+        const text = `You have ${stagesToApprove.length} active requests.\nFollow the link below to approve 'em all!\nhttps://tinyurl.com/2p8svfxn`
         const messageRes = await sendMessage(text, approver.phoneNumber);
         const { body, from, to, dateCreated, dateSent } = messageRes;
         

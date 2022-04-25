@@ -12,7 +12,7 @@ export default class Rank extends BaseEntity {
 	id!: string;
 
 	@Column('int')
-	order!: string;
+	order!: number;
 
 	@Column('varchar')
 	name!: string;

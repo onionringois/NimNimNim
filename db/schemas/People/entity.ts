@@ -2,8 +2,11 @@ import {
 	Entity,
 	Column,
 	BaseEntity,
-	PrimaryColumn
+	PrimaryColumn,
+	JoinColumn,
+	ManyToOne
 } from 'typeorm';
+import { Rank } from '../entities';
 
 @Entity()
 export default class People extends BaseEntity {
@@ -16,8 +19,11 @@ export default class People extends BaseEntity {
 	@Column('varchar')
 	phoneNumber!: string;
 
-	@Column('int')
-	rank!: number;
+	@Column('uuid')
+	rankId!: string;
+	@ManyToOne(() => Rank)
+	@JoinColumn({ name: 'rank_id' })
+	rank!: Rank;
 
 	@Column('varchar')
 	gender!: string
