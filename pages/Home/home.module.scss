@@ -36,4 +36,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 2px;
+
+    &:hover {
+        filter: brightness(0.8);
+        cursor: pointer;
+    }
 }
