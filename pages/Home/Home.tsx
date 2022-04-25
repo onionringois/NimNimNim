@@ -5,8 +5,11 @@ const Home: React.FC = () => {
   return (
     <div className={styles.homeContainer}>
       <div className={styles.homeHeadline}>מארס</div>
-      <div>שומרים עלייך</div>
-      <div>להוצאת נשק</div>
+      <div className={styles.homeSubHeadline}>שומרים עלייך.</div>
+      <div className={styles.homeButtonsContainer}>
+        <div className={styles.homeButton}>להוצאת נשק</div>
+        <div className={styles.homeButton}>השמירות שלי</div>
+      </div>
     </div>
   )
 }
